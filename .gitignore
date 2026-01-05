@@ -1,0 +1,438 @@
+# .gitignore for Smart Quizzer Backend
+
+# ============================================================
+# Python
+# ============================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.*.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+
+# ============================================================
+# Project Specific - Environment & Secrets
+# ============================================================
+
+# Environment variables (IMPORTANT!)
+.env
+.env.production
+.env.development
+.env.test
+.env.staging
+*.env
+
+# API keys and secrets
+secrets.json
+secrets.yaml
+credentials.json
+credentials.yaml
+
+# Google OAuth credentials
+client_secret*.json
+oauth_credentials.json
+
+
+# ============================================================
+# Database
+# ============================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.sql
+*.dump
+*.backup
+
+# Alembic (if you use it later)
+alembic/versions/*.pyc
+
+
+# ============================================================
+# IDEs and Editors
+# ============================================================
+
+# VSCode
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+
+# ============================================================
+# Operating System
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ============================================================
+# Logs
+# ============================================================
+
+# Application logs
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Log files
+*.log
+logs/
+log/
+
+
+# ============================================================
+# Temporary Files
+# ============================================================
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~.nib
+
+
+# ============================================================
+# Uploads & Media (if you store files locally)
+# ============================================================
+
+# Uploaded files
+uploads/
+media/
+static/uploads/
+
+# PDFs (if stored locally)
+*.pdf
+app/uploads/*.pdf
+
+
+# ============================================================
+# Docker
+# ============================================================
+
+# Docker volumes
+docker-compose.override.yml
+.dockerignore
+
+
+# ============================================================
+# Testing
+# ============================================================
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Test databases
+test.db
+test.sqlite
+test.sqlite3
+
+
+# ============================================================
+# Backup files
+# ============================================================
+
+*.bak
+*.backup
+*.old
+*.orig
+
+
+# ============================================================
+# Package managers
+# ============================================================
+
+# pip
+pip-wheel-metadata/
+
+# Poetry
+poetry.lock
+
+
+# ============================================================
+# AI / ML Models (if you decide to store models locally)
+# ============================================================
+
+# Model files
+*.pkl
+*.h5
+*.model
+*.pth
+*.onnx
+models/
+
+
+# ============================================================
+# Redis
+# ============================================================
+
+# Redis dump
+dump.rdb
+
+
+# ============================================================
+# Documentation build files
+# ============================================================
+
+docs/_build/
+docs/_static/
+docs/_templates/
+
+
+# ============================================================
+# Project specific
+# ============================================================
+
+# Cache
+.cache/
+cache/
+
+# Local configuration
+config.local.py
+settings.local.py
+
+# Development files
+dev/
+development/
+
+# Notes
+notes.txt
+TODO.txt
+NOTES.md
+
+# Scripts (optional - remove if you want to track scripts)
+scripts/local/
