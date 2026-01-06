@@ -4,20 +4,38 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from app.core.config import settings
 from typing import Optional
+import hashlib
 
 
 # Password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
+def _prepare_password(password: str) -> bytes:
+    """
+    Prepare password for bcrypt hashing.
+    Bcrypt has a 72-byte limit, so we hash long passwords with SHA256 first.
+    """
+    # Convert to bytes
+    password_bytes = password.encode('utf-8')
+    
+    # If password is longer than 72 bytes, hash it first with SHA256
+    if len(password_bytes) > 72:
+        return hashlib.sha256(password_bytes).hexdigest().encode('utf-8')
+    
+    return password_bytes
+
+
 def hash_password(password: str) -> str:
     """Hash a password [file:21]"""
-    return pwd_context.hash(password)
+    prepared = _prepare_password(password)
+    return pwd_context.hash(prepared)
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify password against hash [file:21]"""
-    return pwd_context.verify(plain_password, hashed_password)
+    prepared = _prepare_password(plain_password)
+    return pwd_context.verify(prepared, hashed_password)
 
 
 def create_access_token(user_id: int) -> str:
